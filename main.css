@@ -1,3 +1,136 @@
+/* --- Custom Section Spacing and Contact Form Styles (from style.css) --- */
+.landing-page,
+.about,
+.projects,
+.contact {
+  padding: 100px 0;
+  min-height: 80vh;
+}
+
+/* Section headings (override for larger headings) */
+.landing-page h2,
+.about h2,
+.projects h2,
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #22223b;
+  letter-spacing: 2px;
+}
+
+/* Project item layout for more space and modern look */
+.project-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem;
+}
+.project-img {
+  flex: 1 1 250px;
+  text-align: center;
+}
+.project-img img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.project-description {
+  flex: 2 1 350px;
+  padding: 1rem 2rem;
+}
+.has-margin-right {
+  margin-right: 2rem;
+}
+
+/* About section image and text box */
+.about-img {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #007bff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.about-text-box {
+  font-size: 1.15rem;
+  color: #22223b;
+  line-height: 1.7;
+}
+
+/* Contact form styles */
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  min-width: 350px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form button {
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 900px) {
+  .project-item {
+    flex-direction: column;
+    padding: 1.2rem;
+  }
+  .has-margin-right {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .project-description {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-page h2,
+  .about h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .about-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .container {
+    padding: 0 8px;
+  }
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
 
 /* Global styles */

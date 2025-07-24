@@ -15,7 +15,7 @@
   <body>
     
     <main>
-      <section id="landing-page" class="landing-page">
+      <section id="landing-page" class="landing-page" style="padding: 100px 0; min-height: 80vh;">
         <div class="container">
           <div class="main-message">
             <h2>Garvit Tyagi</h2>
@@ -37,7 +37,7 @@
           </div>
         </div>
       </section>
-      <section id="about" class="about">
+      <section id="about" class="about" style="padding: 100px 0; min-height: 80vh;">
         <div class="container">
           <div class="about-img">
             <img
@@ -62,7 +62,7 @@
         <hr />
       </section>
       
-      <section id="projects" class="projects">
+      <section id="projects" class="projects" style="padding: 100px 0; min-height: 80vh;">
         <div class="title-heading">
           <h2>PROJECTS</h2>
           <p>These are some of my recent projects</p>
@@ -113,7 +113,7 @@
         </div>
         <hr />
       </section>
-      <section id="contact" class="contact">
+      <section id="contact" class="contact" style="padding: 100px 0; min-height: 80vh;">
         <h2>Get In Touch</h2>
         <p>
           I'd love if you reached out to me. Even if it's just to say "Hey!".
@@ -122,10 +122,18 @@
         
         <div class="container">
           <p>
-            <a href="mailto:chaoocharles@gmail.com"
-              ><i class="fas fa-envelope-open"></i> garvittyaginawla@gmail.com </a
-            >
+            <a href="mailto:garvittyaginawla@gmail.com">
+              <i class="fas fa-envelope-open"></i> garvittyaginawla@gmail.com
+            </a>
           </p>
+          <form class="contact-form" action="https://formsubmit.co/garvittyaginawla@gmail.com" method="post">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <input type="hidden" name="_next" value="thank-you.html" />
+            <button type="submit">Submit</button>
+          </form>
         </div>
         <hr />
       </section>

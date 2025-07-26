@@ -1,3 +1,34 @@
+// --- Dark/Light Mode Toggle ---
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.getElementById('darkModeToggle');
+  const modeIcon = document.getElementById('modeIcon');
+  const body = document.body;
+  let darkMode = true;
+  function setMode() {
+    if (darkMode) {
+      body.classList.add('dark-mode');
+      body.classList.remove('light-mode');
+      if (modeIcon) {
+        modeIcon.classList.remove('fa-sun');
+        modeIcon.classList.add('fa-moon');
+      }
+    } else {
+      body.classList.remove('dark-mode');
+      body.classList.add('light-mode');
+      if (modeIcon) {
+        modeIcon.classList.remove('fa-moon');
+        modeIcon.classList.add('fa-sun');
+      }
+    }
+  }
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      darkMode = !darkMode;
+      setMode();
+    });
+    setMode();
+  }
+});
 // Function expression to select elements `
 
 const selectElement = (s) => document.querySelector(s);

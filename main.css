@@ -1,3 +1,133 @@
+/* --- Project Description Text Visibility --- */
+.project-description,
+.project-description.has-margin-right,
+.project-description.has-margin-left {
+  color: #1a237e;
+  transition: color 0.4s;
+}
+
+body.dark-mode .project-description,
+body.dark-mode .project-description.has-margin-right,
+body.dark-mode .project-description.has-margin-left {
+  color: #ffb347;
+}
+
+body.light-mode .project-description,
+body.light-mode .project-description.has-margin-right,
+body.light-mode .project-description.has-margin-left {
+  color: #1a237e;
+}
+/* --- About Section Heading Visibility --- */
+.about-text-box h2 {
+  color: #1a237e;
+  background: linear-gradient(90deg, #ffb347 0%, #1a237e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 2.3rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.2rem;
+  transition: color 0.4s, background 0.4s;
+}
+
+body.dark-mode .about-text-box h2 {
+  color: #ffb347;
+  background: linear-gradient(90deg, #ffb347 0%, #fffbe7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+/* --- About Text Box Visibility for Light/Dark Mode --- */
+.about-text-box {
+  color: #22223b;
+  background: #fffbe7;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  padding: 2rem 2.5rem;
+  transition: background 0.4s, color 0.4s;
+}
+
+body.dark-mode .about-text-box {
+  color: #f5f5f5;
+  background: #23243a;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.25);
+}
+
+body.light-mode .about-text-box {
+  color: #22223b;
+  background: #fffbe7;
+}
+/* --- Dark/Light Mode Toggle Button Styles --- */
+.top-right-btn {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  z-index: 1000;
+}
+
+body.dark-mode {
+  background: #181818;
+  color: #f5f5f5;
+  transition: background 0.4s, color 0.4s;
+}
+
+body.light-mode {
+  background: #f5f5f5;
+  color: #181818;
+  transition: background 0.4s, color 0.4s;
+}
+
+body.dark-mode .main-message-title {
+  color: #ffb347;
+  text-shadow: 0 2px 8px #000a;
+}
+
+body.light-mode .main-message-title {
+  color: #1a237e;
+  text-shadow: 0 2px 8px #fff8;
+}
+
+.main-message-title {
+  color: #ffb347;
+  letter-spacing: 1.2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(27), blink 1s ease-in-out 7s infinite;
+  width: 27ch;
+  margin: auto;
+  border-right: 4px solid rgba(255, 255, 255, 1);
+  transition: color 0.4s, text-shadow 0.4s;
+}
+
+.top-right-btn .btn {
+  background: #22223b;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.top-right-btn .btn:hover {
+  background: #ffb347;
+  color: #22223b;
+}
+
+body.light-mode .top-right-btn .btn {
+  background: #1a237e;
+  color: #fff;
+}
+body.light-mode .top-right-btn .btn:hover {
+  background: #ffb347;
+  color: #1a237e;
+}
 /* --- Custom Section Spacing and Contact Form Styles (from style.css) --- */
 .landing-page,
 .about,
@@ -350,17 +480,7 @@ nav {
   text-align: center;
 }
 
-.main-message h2 {
-  letter-spacing: 1.2rem;
-  font-size: 2rem;
-  font-weight: 400;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 5s steps(27), blink 1s ease-in-out 7s infinite;
-  width: 27ch;
-  margin: auto;
-  border-right: 4px solid rgba(255, 255, 255, 1);
-}
+
 
 @keyframes typing {
   75% {
